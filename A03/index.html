@@ -1,9 +1,41 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="script.js"></script>
+    <style>
+        table{
+            border: solid black 2px;
+            width: 100%;
+        }
+        tr{
+            border: solid black 2px;
+        }
+        td{
+            border: solid black 2px;
+        }
+    </style>
 </head>
 <body>
-  <script src="script.js"></script>
+   <table>
+       <thead>
+           <td>id</td>
+           <td>firstName</td>
+           <td>lastName</td>
+           <td>Grade</td>
+           <td>symbol</td>
+       </thead>
+       <tbody id="table_body">
+           
+       </tbody>
+   </table>
+
+    <button onclick="generate()">ქულების გენერირება</button>
+
+
+    
 </body>
 </html>
