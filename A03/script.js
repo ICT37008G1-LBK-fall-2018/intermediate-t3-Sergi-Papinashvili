@@ -71,42 +71,39 @@ function create_table(list) {
         let style;
         if (list[i].Grade>=91) {
             symbol = simbols[0];
-            style = 'style="color: green;"'
+            style = 'style="background-color: green;"'
           }
           if (list[i].Grade>=81&&list[i].Grade<91) {
             symbol = simbols[1];
-            style = 'style="color: green;"'
+            style = 'style="background-color: green;"'
           }
           if (list[i].Grade>=71&&list[i].Grade<81) {
             symbol = simbols[2];
-            style = 'style="color: yellow;"'
+            style = 'style="background-color: yellow;"'
           }
           if (list[i].Grade>=61&&list[i].Grade<71) {
             symbol = simbols[3];
-            style = 'style="color: yellow;"'
+            style = 'style="background-color: yellow;"'
           }
           if (list[i].Grade>=51&&list[i].Grade<61) {
             symbol = simbols[4];
-            style = 'style="color: orange;"'
+            style = 'style="background-color: orange;"'
           }
           if (list[i].Grade>=41&&list[i].Grade<51) {
             symbol = simbols[5];
-            style = 'style="color: red;"'
+            style = 'style="background-color: red;"'
           }
           if (list[i].Grade<41) {
             symbol = simbols[5];
-            style = 'style="color: red;"'
+            style = 'style="background-color: red;"'
           }
         html += 
         `
-        <tr>
-            <td>${list[i].PersonalNumber}</td>
-            <td>${list[i].FirstName}</td>
-            <td>${list[i].LastName}</td>
-            <td>${list[i].Grade}</td>
-            <td ${style}>${symbol}</td>
-        </tr>
+        <li ${style}>
+            ${list[i].PersonalNumber} ${list[i].FirstName} ${list[i].LastName} ${list[i].Grade} ${symbol}
+             </li>
+    
         `;
     }
-    document.getElementById("table_body").innerHTML = html;
+    document.getElementById("list-body").innerHTML = html;
 }

@@ -1,9 +1,9 @@
 function calculate(a) {
     if (parseInt(a)<=0&&parseInt(a)>=100) {
-        alert("გთხოვთ სწორ ინტერვალში მიუთითოთ რიცხვი");
+        alert("not allowed interval");
         return;
     }
-    alert(`ლუწი რიცხვების ჯამი ${a}_მდე = `+get_sum_of_even(parseInt(a)));
+    alert(`ლუწი რიცხვების ჯამი  ${a}_მდე = `+get_sum_of_even(parseInt(a)));
 }
 
 function get_sum_of_even(n) {
